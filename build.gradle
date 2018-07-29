@@ -1,3 +1,4 @@
+
 buildscript {
 	ext {
 		springBootVersion = '2.0.3.RELEASE'
@@ -10,14 +11,23 @@ buildscript {
 	}
 }
 
+plugins {
+    id "net.researchgate.release" version "2.6.0"
+}
+
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'net.researchgate.release'
 
 group = 'au.com.ronvenar'
-version = '0.0.1-SNAPSHOT'
+version = "${version}"
 sourceCompatibility = 1.8
+
+
+
 
 repositories {
 	mavenCentral()
